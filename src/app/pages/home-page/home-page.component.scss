@@ -1,0 +1,11 @@
+.image-card {
+    padding: 6px;
+    &.h-5by3 {
+        height: 250px;
+    }
+    .card-box {
+        border:1px solid white;
+        height: 100%;
+        padding:5px;
+    }
+}
