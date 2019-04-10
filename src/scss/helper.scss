@@ -1,0 +1,36 @@
+.mt-xl {
+  margin-top: 2rem;
+}
+
+.mt-l {
+  margin-top: 1rem;
+}
+
+.mb-xl {
+  margin-bottom: 2rem;
+}
+
+.mb-l {
+  margin-bottom: 1rem;
+}
+
+
+/* ------------------------------- Image sizes ------------------------------ */
+.image.is-150x150 {
+  width: 150px;
+  height: 150px;
+}
+
+.image.is-236x148 {
+  width: 236px;
+  height: 148px;
+}
+
+/* --------------------------------- buttons -------------------------------- */
+.button.is-primary {
+  background: $primaryColor;
+
+  &:hover {
+    background: $primaryHighlightColor;
+  }
+}

@@ -1,2 +1,18 @@
 <app-top-header></app-top-header>
-<router-outlet></router-outlet>
+<div class="top-banner">
+        <img src="https://via.placeholder.com/1344x344.png">
+      </div>
+<div class="container">
+  <div class="mb-xl">
+    <div class="columns">
+
+      <div class="column is-offset-1 is-7">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- Right side bar -->
+      <div class="column is-3">
+          <app-right-side-bar></app-right-side-bar>
+      </div>
+      <div class="column is-1"></div>
+    </div>
+    <app-footer></app-footer>

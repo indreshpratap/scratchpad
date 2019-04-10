@@ -1,65 +1,58 @@
-<div class="top-banner">
-  <img src="assets/images/ban-1544423061358.jpg">
-</div>
-<div class="container">
-  <div class="columns">
-
-    <div class="column is-9">
-
-      <div class="columns is-multiline">
-        <div class="column is-6" *ngFor="let card of imageCards">
-          <div class="image-card h-5by25" style="background:url('{{imgPath+card.image}}')">
-            <div class="card-box">
-              <div class="top-tag">{{card.topTag}}</div>
-              <div class="bottom-tagline">
-                {{card.bottomTagline}}
-              </div>
-            </div>
+<div>
+  <div class="columns is-multiline">
+    <div class="column is-6" *ngFor="let card of imageCards">
+      <div class="image-card h-5by25" style="background:url('https://via.placeholder.com/318x220.png/444444')">
+        <div class="card-box">
+          <div class="top-tag">{{card.topTag}}</div>
+          <div class="bottom-tagline">
+            {{card.bottomTagline}}
           </div>
         </div>
-        <div class="column is-12">
-          <div class="image-card h-5by25" style="background:url('assets/images/india_t.jpg')">
-            <div class="card-box">
-              <div class="top-tag">SURPRIZE Me</div>
-              <div class="bottom-tagline">
-                8 Secret Place to Explore in Thailand
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-6" *ngFor="let card of imageCards">
-            <div class="image-card h-5by25" style="background:url('{{imgPath+card.image}}')">
-              <div class="card-box">
-                <div class="top-tag">{{card.topTag}}</div>
-                <div class="bottom-tagline">
-                  {{card.bottomTagline}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-6" *ngFor="let card of imageCards">
-              <div class="image-card h-5by25" style="background:url('{{imgPath+card.image}}')">
-                <div class="card-box">
-                  <div class="top-tag">{{card.topTag}}</div>
-                  <div class="bottom-tagline">
-                    {{card.bottomTagline}}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
       </div>
     </div>
-    <div class="column is-3">
-
-      <div class="field">
-        <div class="control">
-          <input type="search" class="input">
+    <div class="column is-12">
+      <div class="image-card h-5by25" style="background:url('https://via.placeholder.com/844x244.png/444444')">
+        <div class="card-box">
+          <div class="top-tag">SURPRIZE Me</div>
+          <div class="bottom-tagline">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </div>
         </div>
       </div>
-
     </div>
+    <div class="column is-6" *ngFor="let card of imageCards">
+      <div class="image-card h-5by25" style="background:url('https://via.placeholder.com/318x220.png/444444')">
+        <div class="card-box">
+          <div class="top-tag">{{card.topTag}}</div>
+          <div class="bottom-tagline">
+            {{card.bottomTagline}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-6" *ngFor="let card of imageCards">
+      <div class="image-card h-5by25" style="background:url('https://via.placeholder.com/318x220.png/444444')">
+        <div class="card-box">
+          <div class="top-tag">{{card.topTag}}</div>
+          <div class="bottom-tagline">
+            {{card.bottomTagline}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </div>
+  <nav class="pagination is-centered is-small" role="navigation" aria-label="pagination">
+
+    <ul class="pagination-list">
+      <li><a class="pagination-link" aria-label="Goto page 1">&lt;</a></li>
+      <li><a class="pagination-link" aria-label="Goto page 45">1</a></li>
+      <li><a class="pagination-link" aria-label="Page 46" aria-current="page">2</a></li>
+      <li><a class="pagination-link" aria-label="Goto page 47">3</a></li>
+      <li><a class="pagination-link" aria-label="Goto page 86">&gt;</a></li>
+    </ul>
+  </nav>
 </div>

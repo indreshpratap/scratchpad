@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+$primaryColor : orange;
+$primaryHighlightColor: darkorange;
+$grayBorder : lightgrey;
+
+@import 'scss/helper.scss';
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* -------------------------------- Wts card -------------------------------- */
+
+.wts-card {
+  padding: 0 1rem;
+
+  .card-content {
+    padding: 0;
+    padding-bottom: .5rem;
+  }
+
+  .card-header {
+    color: $primaryColor;
+    box-shadow: none;
+    border-bottom: 2px solid $primaryColor;
+
+  }
+
+  ul li {
+    padding: .3rem 0;
+    margin-bottom: .3rem;
+
+    &:first-child {
+      margin-top: .3rem;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grayBorder;
+    }
+  }
+
+}
+
+/* ------------------------------- Image card ------------------------------- */
+.image-card {
+    padding: 6px;
+    &.h-5by25 {
+        height: 220px;
+    }
+    .card-box {
+        border:1px solid white;
+        height: 100%;
+        padding:5px;
+        position: relative;
+        .top-tag {
+            background:rgba($color: #FFFFFF, $alpha: .35);
+            color:black;
+            padding:5px;
+            display: inline-block;
+            font-size: .8rem;
+        }
+        .bottom-tagline {
+            position: absolute;
+            bottom: 10px;
+            color:white;
+        }
+    }
+}
+
+/* ----------------------------- POST Card ---------------------------- */
+
+.post-card {
+
+  .title {
+    margin: .5rem 0 .5rem 0;
+  }
+}
+
+/* ------------------------------- Pagination ------------------------------- */
+.pagination {
+  .pagination-link {
+    border-color: $primaryColor;
+    color: $primaryColor;
+  }
+}
+
+/* --------------------------------- Footer --------------------------------- */
+.footer {
+    background-color: black;
+    color:white;
+
+    .copyright {
+        border-top:1px solid $grayBorder;
+        margin: 1rem 3rem;
+        padding-top: 1rem;
+
+    }
+}
