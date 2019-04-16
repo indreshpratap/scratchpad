@@ -1,0 +1,22 @@
+.floating-menu-panel {
+    position: fixed;
+    left:0;
+    top:3rem;
+    ul  li {
+        background:rgb(100, 146, 247);
+        color:white;
+        border-bottom: 1px solid;
+        cursor: pointer;
+        padding:5px 5px;
+        font-size: .8rem;
+    }
+}
+
+.editor-row {
+    position: relative;
+    .delete {
+        position: absolute;
+        right: 74px;
+        top: 20px;
+    }
+}

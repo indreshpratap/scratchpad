@@ -1,0 +1,51 @@
+<div class="floating-menu-panel">
+  <ul>
+    <li *ngFor="let opt of options" (click)="addRow(opt)">{{opt}}</li>
+  </ul>
+</div>
+<div class="container">
+  <div class="editor-row" *ngFor="let row of editorRows;let indx=index">
+    <div class="columns">
+      <div *ngFor="let cell of row.cells" class="column is-{{12/row.cells.length}}">
+        <textarea *ngIf="cell.type==='content'"></textarea>
+        <input type="file" *ngIf="cell.type==='image'">
+        <div *ngIf="cell.type==='read_more'">
+          Read More: <input type="text" placeholder="put your url here">
+        </div>
+
+        <div *ngIf="cell.type==='bookbtn_share'">
+          <input type="text" class="input-button" placeholder="Button level here">
+          <div class="field has-addons">
+            <p class="control">
+              <a class="button is-small">
+                <span class="icon is-small">
+                  <i class="fas fa-align-left"></i>
+                </span>
+                <span>Left</span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-small">
+                <span class="icon is-small">
+                  <i class="fas fa-align-center"></i>
+                </span>
+                <span>Center</span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-small">
+                <span class="icon is-small">
+                  <i class="fas fa-align-right"></i>
+                </span>
+                <span>Right</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <span class="delete" (click)="removeRow(indx)"></span>
+  </div>
+
+</div>
