@@ -7,8 +7,9 @@
   <div class="editor-row" *ngFor="let row of editorRows;let indx=index">
     <div class="columns">
       <div *ngFor="let cell of row.cells" class="column is-{{12/row.cells.length}}">
-        <textarea *ngIf="cell.type==='content'"></textarea>
-        <input type="file" *ngIf="cell.type==='image'">
+        <quill-md *ngIf="cell.type==='content'"></quill-md>
+        <file-uploader *ngIf="cell.type==='image'"></file-uploader>
+    
         <div *ngIf="cell.type==='read_more'">
           Read More: <input type="text" placeholder="put your url here">
         </div>

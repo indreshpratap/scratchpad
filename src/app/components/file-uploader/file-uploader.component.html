@@ -1,0 +1,5 @@
+<div (click)="fileInput.click()"  (drop)="handleFileDrop($event)" (dragleave)="handleDragLeave($event)" (dragover)="handleDragOver($event)">
+
+  <input #fileInput type="file" style="display: none" (change)="handleFileSelection($event)">
+  Click or Drag or drop your files here
+</div>
