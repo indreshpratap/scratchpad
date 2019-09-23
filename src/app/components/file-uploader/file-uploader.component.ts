@@ -25,7 +25,7 @@ export class FileUploaderComponent implements OnInit {
   }
 
   handleFileSelection($event) {
-
+      
   }
 
 }

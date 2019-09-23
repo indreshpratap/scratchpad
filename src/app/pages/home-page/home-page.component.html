@@ -1,4 +1,21 @@
 <div>
+  <div>
+    <textarea [(ngModel)]="plain" cols="50" rows="10"></textarea>
+
+  </div>
+  <textarea [ngModel]="encrypted"  cols="50" rows="10"></textarea> 
+  <br>
+ <div>
+
+   <button (click)="encrypt()">Encrypt</button>
+   <button (click)="decrypt()">Decrypt</button>
+  </div>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aut at possimus deleniti eaque error, repudiandae vitae voluptatem excepturi ipsam adipisci quaerat architecto nostrum odio non soluta et necessitatibus officia!
+  Nulla suscipit sint corrupti enim perferendis, dolore officiis illum sit cupiditate architecto nihil. Maiores at animi quos odio repellendus! Ratione eius quod, rerum libero beatae error tempora consequuntur vero eaque!
+  Consequatur ad expedita maxime nam ab quasi commodi fugit quaerat consequuntur aperiam molestiae ipsa asperiores dolor odit eligendi, saepe nostrum voluptas aliquid optio quos dignissimos modi! Dolore voluptatum placeat aspernatur.
+  Nemo iure laudantium asperiores officia quia expedita tempora modi dolores impedit harum magnam quas, itaque eum necessitatibus accusantium et doloribus dolorum unde aspernatur repudiandae. Ab repellat consequuntur id! Quibusdam, et.
+  Eligendi labore iusto, exercitationem laborum dolores dolorem! Dolor ipsum optio est ad. Voluptates eaque ipsam possimus, quam similique dolores quod iusto eveniet doloribus voluptate dignissimos neque illum, harum magnam commodi!
+
   <div class="columns is-multiline">
     <div class="column is-6" *ngFor="let card of imageCards">
       <div class="image-card h-5by25" style="background:url('https://via.placeholder.com/318x220.png/444444')">

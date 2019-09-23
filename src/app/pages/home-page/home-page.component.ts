@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import SimpleCrypto from "simple-crypto-js";
 
+declare var dataLayer:any;
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -9,10 +11,16 @@ export class HomePageComponent implements OnInit {
 
   imageCards = []
   imgPath = 'assets/images/';
+  plain:string='plan';
+  encrypted:string;
   
   constructor() { }
 
   ngOnInit() {
+    dataLayer.push({
+      event:'pageLoad',
+      page:'home'
+    })
     this.fetchImageCards();
   }
 
@@ -23,6 +31,30 @@ export class HomePageComponent implements OnInit {
       { image: 'asia.jpg', topTag: 'SURPRIZE ME', bottomTagline: ' 8 Secret Place to Explore in Thailand' },
       { image: 'europe.jpg', topTag: 'SURPRIZE ME', bottomTagline: ' 8 Secret Place to Explore in Thailand' },
     ];
+  }
+
+  simpleCrypto = new SimpleCrypto("some-unique-key");
+  encrypt(){
+    
+   
+     
+    var plainText = this.plain;
+    console.log("TCL: HomePageComponent -> encrypt -> plainText", plainText);
+    
+    console.log("Encryption process...");
+    var cipherText = this.simpleCrypto.encrypt(plainText);
+    console.log("Plain Text    : " + plainText);
+    console.log("Cipher Text   : " + cipherText);
+    this.encrypted = cipherText;
+  }
+
+  decrypt() {
+   
+    console.log("... and then decryption...");
+    var decipherText = this.simpleCrypto.decrypt(this.encrypted);
+    console.log("Decipher Text : " + decipherText);
+    console.log("... done.");
+    this.plain = decipherText as string;
   }
 
 }

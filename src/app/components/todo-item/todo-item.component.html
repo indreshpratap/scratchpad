@@ -1,0 +1,19 @@
+<div>
+  <div class="todo">
+
+    <span class="pointer" (click)="select.emit(todo)"></span>
+    <span 
+    (keyup.control.arrowright)="emitIn($event)"
+    (keyup.control.arrowleft)="emitOut($event)" #input class="todo-entry"
+    contenteditable="true" [(ngModel)]="todo.label" [class.bold]="todo.bold" [class.italic]="todo.italic"></span>
+    <span (click)="emitOut($event)">&#8656;</span>
+    <span (click)="emitIn($event)">&#8658;</span>
+    <span (click)="add.emit(todo)">+</span>
+  </div>
+
+  <div class="child-todo-list" *ngFor="let cTodo of todo.todoList;let index=index;">
+    <app-todo-item [todo]="cTodo" [index]="index" [parent]="todo" (select)="select.emit($event)" (add)="add.emit($event)"
+      (goIn)="goIn.emit($event)" (goOut)="goOut.emit($event)">
+    </app-todo-item>
+  </div>
+</div>

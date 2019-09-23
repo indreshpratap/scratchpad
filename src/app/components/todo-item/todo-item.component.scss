@@ -1,0 +1,20 @@
+.child-todo-list {
+  padding-left: 10px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+
+  * {
+      margin:0 5px;
+  }
+  .pointer {
+      width:10px;height:10px;
+        background: black;
+        border-radius: 50%;
+  }
+  .todo-entry {
+    flex: 1
+  }
+}

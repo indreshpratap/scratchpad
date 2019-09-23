@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PAGES } from './pages';
 import { LAYOUTS } from './layout';
 import { COMPONENTS } from './components';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { COMPONENTS } from './components';
     ...COMPONENTS
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

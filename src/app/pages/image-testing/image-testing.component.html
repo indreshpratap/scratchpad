@@ -1,0 +1,10 @@
+<ul style="display: flex">
+  <li style="width:100px" *ngFor="let item of items">
+    <div>{{item.title}}</div>
+    <img [src]="'assets/images/'+item.src">
+  </li>
+</ul>
+
+<button (click)="test1([0,3])">Test 1</button>
+
+<a routerLink="image-testing">Test to </a>

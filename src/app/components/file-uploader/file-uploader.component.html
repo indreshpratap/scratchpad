@@ -1,5 +1,8 @@
-<div (click)="fileInput.click()"  (drop)="handleFileDrop($event)" (dragleave)="handleDragLeave($event)" (dragover)="handleDragOver($event)">
+<div (click)="fileInput.click()" class="file-upload-container" (drop)="handleFileDrop($event)"
+     (dragleave)="handleDragLeave($event)" (dragover)="handleDragOver($event)">
 
-  <input #fileInput type="file" style="display: none" (change)="handleFileSelection($event)">
-  Click or Drag or drop your files here
+  <span>
+    Click or Drag or drop your files here
+  </span>
+  <input accept="image/*" #fileInput type="file" style="display: none" (change)="handleFileSelection($event)">
 </div>

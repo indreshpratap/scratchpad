@@ -1,0 +1,8 @@
+<div class="todo-container">
+  <button (click)="add(null)">Add</button>
+  <div class="todo-list">
+    <app-todo-item *ngFor="let todo of todoRoot;let ind=index" [todo]="todo" [parent]="null" [index]="ind"
+      (select)="onSelect($event)" (add)="add($event)" (goIn)="handleGoIn($event)" (goOut)="handleGoOut($event)">
+    </app-todo-item>
+  </div>
+</div>
